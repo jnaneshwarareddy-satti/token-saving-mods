@@ -1,0 +1,6 @@
+{
+  "name": "savings-proof",
+  "version": "0.1.0",
+  "description": "Tracks what fraction of turns used a cheaper model, as proof of the routing mods",
+  "types": "./types/index.d.ts"
+}

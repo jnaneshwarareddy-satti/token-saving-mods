@@ -1,0 +1,6 @@
+{
+  "name": "efficient-browser-use",
+  "version": "0.1.0",
+  "description": "Nudges toward get_page_text/read_page over repeated screenshots to save tokens",
+  "types": "./types/index.d.ts"
+}

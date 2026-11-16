@@ -1,0 +1,6 @@
+{
+  "name": "input-router",
+  "version": "0.1.0",
+  "description": "Routes simple, short prompts to a cheaper model to save tokens",
+  "types": "./types/index.d.ts"
+}

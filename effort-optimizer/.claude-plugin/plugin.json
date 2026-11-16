@@ -1,0 +1,6 @@
+{
+  "name": "effort-optimizer",
+  "version": "0.1.0",
+  "description": "Lowers reasoning effort to 'low' for short, single-step prompts to save tokens",
+  "types": "./types/index.d.ts"
+}

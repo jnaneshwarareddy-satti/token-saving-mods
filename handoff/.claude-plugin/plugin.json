@@ -1,0 +1,5 @@
+{
+  "name": "handoff",
+  "version": "0.1.0",
+  "description": "A /handoff command that writes a compact summary to start a fresh session from"
+}

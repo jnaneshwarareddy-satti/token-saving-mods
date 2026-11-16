@@ -1,0 +1,6 @@
+{
+  "name": "model-router",
+  "version": "0.1.0",
+  "description": "Force a model for one turn with a prefix like 'haiku: ...' or 'opus: ...'",
+  "types": "./types/index.d.ts"
+}

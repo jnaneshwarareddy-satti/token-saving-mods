@@ -1,0 +1,15 @@
+{
+  "name": "token-saving-mods",
+  "owner": { "name": "jnaneshwarareddys-tech" },
+  "plugins": [
+    { "name": "input-router", "source": "./input-router" },
+    { "name": "effort-optimizer", "source": "./effort-optimizer" },
+    { "name": "model-router", "source": "./model-router" },
+    { "name": "cache-clock", "source": "./cache-clock" },
+    { "name": "handoff", "source": "./handoff" },
+    { "name": "research-router", "source": "./research-router" },
+    { "name": "efficient-browser-use", "source": "./efficient-browser-use" },
+    { "name": "mods", "source": "./mods" },
+    { "name": "savings-proof", "source": "./savings-proof" }
+  ]
+}

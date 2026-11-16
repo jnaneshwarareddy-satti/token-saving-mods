@@ -1,0 +1,6 @@
+{
+  "name": "cache-clock",
+  "version": "0.1.0",
+  "description": "Warns when you've likely gone idle long enough to lose prompt cache",
+  "types": "./types/index.d.ts"
+}
