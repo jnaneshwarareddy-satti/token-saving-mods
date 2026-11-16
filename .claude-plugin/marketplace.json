@@ -1,6 +1,6 @@
 {
   "name": "token-saving-mods",
-  "owner": { "name": "jnaneshwarareddys-tech" },
+  "owner": { "name": "jnaneshwarareddy-satti" },
   "plugins": [
     { "name": "input-router", "source": "./input-router" },
     { "name": "effort-optimizer", "source": "./effort-optimizer" },

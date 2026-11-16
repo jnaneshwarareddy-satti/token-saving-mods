@@ -8,15 +8,15 @@ awareness, and a couple of status/reporting commands.
 At the prompt of a terminal session:
 
 ```
-/plugin install input-router --marketplace jnaneshwarareddys-tech/token-saving-mods
-/plugin install effort-optimizer --marketplace jnaneshwarareddys-tech/token-saving-mods
-/plugin install model-router --marketplace jnaneshwarareddys-tech/token-saving-mods
-/plugin install cache-clock --marketplace jnaneshwarareddys-tech/token-saving-mods
-/plugin install handoff --marketplace jnaneshwarareddys-tech/token-saving-mods
-/plugin install research-router --marketplace jnaneshwarareddys-tech/token-saving-mods
-/plugin install efficient-browser-use --marketplace jnaneshwarareddys-tech/token-saving-mods
-/plugin install mods --marketplace jnaneshwarareddys-tech/token-saving-mods
-/plugin install savings-proof --marketplace jnaneshwarareddys-tech/token-saving-mods
+/plugin install input-router --marketplace jnaneshwarareddy-satti/token-saving-mods
+/plugin install effort-optimizer --marketplace jnaneshwarareddy-satti/token-saving-mods
+/plugin install model-router --marketplace jnaneshwarareddy-satti/token-saving-mods
+/plugin install cache-clock --marketplace jnaneshwarareddy-satti/token-saving-mods
+/plugin install handoff --marketplace jnaneshwarareddy-satti/token-saving-mods
+/plugin install research-router --marketplace jnaneshwarareddy-satti/token-saving-mods
+/plugin install efficient-browser-use --marketplace jnaneshwarareddy-satti/token-saving-mods
+/plugin install mods --marketplace jnaneshwarareddy-satti/token-saving-mods
+/plugin install savings-proof --marketplace jnaneshwarareddy-satti/token-saving-mods
 ```
 
 The first install adds the marketplace (`y` to confirm); the rest reuse it.
