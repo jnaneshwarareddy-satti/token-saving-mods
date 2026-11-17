@@ -37,8 +37,8 @@ export const register: Register = on => {
 
       all = await update($, decisions, map => {
         const entries = Object.entries(map)
-        const next = entries.length >= 50 ? entries.slice(1) : entries
-        return { ...Object.fromEntries(next), [e.turnId]: decision! }
+        const kept = entries.length >= 50 ? entries.slice(1) : entries
+        return { ...Object.fromEntries(kept), [e.turnId]: decision! }
       })
     }
 
