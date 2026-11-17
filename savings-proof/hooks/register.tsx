@@ -1,5 +1,8 @@
 import { atom, read, update } from 'claude-code'
 import type { Register } from 'claude-code'
+import { mkdirSync, writeFileSync } from 'node:fs'
+import { homedir } from 'node:os'
+import { dirname, join } from 'node:path'
 
 const counts = atom(
   { plugin: 'savings-proof', key: 'counts' } as const,
@@ -11,6 +14,17 @@ const seenTurns = atom(
   {},
   { shape: 'seenTurns-1' },
 )
+
+const COUNTS_FILE = join(homedir(), '.claude', 'plugin-data', 'savings-proof', 'counts.json')
+
+function persistCounts(all: Record<string, number>): void {
+  try {
+    mkdirSync(dirname(COUNTS_FILE), { recursive: true })
+    writeFileSync(COUNTS_FILE, JSON.stringify({ counts: all, updatedAt: new Date().toISOString() }, null, 2))
+  } catch {
+    // best-effort: in-memory atom is still the source of truth within this session
+  }
+}
 
 export const register: Register = on => {
   on('session.start', async ($, e, next) => {
@@ -31,7 +45,8 @@ export const register: Register = on => {
           const next = entries.length >= 200 ? entries.slice(1) : entries
           return { ...Object.fromEntries(next), [e.turnId]: true as const }
         })
-        await update($, counts, map => ({ ...map, [e.model]: (map[e.model] ?? 0) + 1 }))
+        const all = await update($, counts, map => ({ ...map, [e.model]: (map[e.model] ?? 0) + 1 }))
+        persistCounts(all)
       }
     }
 
