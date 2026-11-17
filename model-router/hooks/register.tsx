@@ -28,8 +28,8 @@ export const register: Register = on => {
     return next({ ...e, text: e.text.slice(match[0].length) })
   })
 
-  on('turn.step', async ($, e, next) => {
-    if (e.agentId !== undefined) return next(e)
+  on('turn.step', async function* ($, e, next) {
+    if (e.agentId !== undefined) return yield* next(e)
 
     let all = await read($, decisions)
     let model = all[e.turnId]
@@ -49,6 +49,6 @@ export const register: Register = on => {
 
     $.ui.status(model ? `${$.plugin.name}: routed to ${model}` : undefined)
 
-    return next(model ? { ...e, model } : e)
+    return yield* next(model ? { ...e, model } : e)
   })
 }

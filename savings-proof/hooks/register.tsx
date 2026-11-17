@@ -22,7 +22,7 @@ export const register: Register = on => {
     return next(e)
   })
 
-  on('turn.step', async ($, e, next) => {
+  on('turn.step', async function* ($, e, next) {
     if (e.agentId === undefined && e.index === 0) {
       const seen = await read($, seenTurns)
       if (seen[e.turnId] === undefined) {
@@ -35,7 +35,7 @@ export const register: Register = on => {
       }
     }
 
-    return next(e)
+    return yield* next(e)
   })
 
   on('command.run', { command: 'savings-proof' }, async $ => {

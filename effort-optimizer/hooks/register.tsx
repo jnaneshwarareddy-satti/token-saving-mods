@@ -24,8 +24,8 @@ function classify(text: string): EffortDecision {
 }
 
 export const register: Register = on => {
-  on('turn.step', async ($, e, next) => {
-    if (e.agentId !== undefined) return next(e)
+  on('turn.step', async function* ($, e, next) {
+    if (e.agentId !== undefined) return yield* next(e)
 
     let all = await read($, decisions)
     let decision = all[e.turnId]
@@ -48,6 +48,6 @@ export const register: Register = on => {
         : undefined,
     )
 
-    return next(decision.effort ? { ...e, effort: decision.effort } : e)
+    return yield* next(decision.effort ? { ...e, effort: decision.effort } : e)
   })
 }
